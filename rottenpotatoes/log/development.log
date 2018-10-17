@@ -876,3 +876,298 @@ DEPRECATION WARNING: `#timestamp` was called without specifying an option for `n
   [1m[35m (16.3ms)[0m  commit transaction
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 02:15:35 +0000
+  [1m[36m (78.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (98.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (107.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (101.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111119180638')
+  [1m[36m (100.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime, "director" varchar) [0m
+  [1m[35m (103.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (86.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (95.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20181017032701')
+  [1m[36m (95.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:21:36 +0000
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:25:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDirectorToMovies (20181017032701)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "movies" ADD "director" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20181017032701"]]
+  [1m[36m (88.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:27:33 +0000
+
+
+Started GET "/rails/info/properties" for 208.71.27.111 at 2018-10-17 23:27:37 +0000
+Processing by Rails::InfoController#properties as HTML
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  Rendered /home/codio/.rvm/gems/ruby-2.4.0/gems/railties-4.2.10/lib/rails/templates/rails/info/properties.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 8.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies" for 208.71.27.111 at 2018-10-17 23:28:03 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 166ms (Views: 154.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-2b9b4ceb35a4568bfbe3001eb6cf7d691787c8ec9b2018eecbc3c235cc74b7a4.css?body=1" for 208.71.27.111 at 2018-10-17 23:28:03 +0000
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 208.71.27.111 at 2018-10-17 23:28:03 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 208.71.27.111 at 2018-10-17 23:28:03 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 208.71.27.111 at 2018-10-17 23:28:03 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2018-10-17 23:30:33.580893"], ["updated_at", "2018-10-17 23:30:33.580893"]]
+  [1m[35m (100.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2018-10-17 23:30:33.683404"], ["updated_at", "2018-10-17 23:30:33.683404"]]
+  [1m[36m (100.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2018-10-17 23:30:33.785293"], ["updated_at", "2018-10-17 23:30:33.785293"]]
+  [1m[35m (98.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-10-17 23:30:33.885558"], ["updated_at", "2018-10-17 23:30:33.885558"]]
+  [1m[36m (108.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2018-10-17 23:30:33.995324"], ["updated_at", "2018-10-17 23:30:33.995324"]]
+  [1m[35m (144.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2018-10-17 23:30:34.141074"], ["updated_at", "2018-10-17 23:30:34.141074"]]
+  [1m[36m (108.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2018-10-17 23:30:34.251172"], ["updated_at", "2018-10-17 23:30:34.251172"]]
+  [1m[35m (113.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2018-10-17 23:30:34.366822"], ["updated_at", "2018-10-17 23:30:34.366822"]]
+  [1m[36m (105.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2018-10-17 23:30:34.473794"], ["updated_at", "2018-10-17 23:30:34.473794"]]
+  [1m[35m (100.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2018-10-17 23:30:34.576302"], ["updated_at", "2018-10-17 23:30:34.576302"]]
+  [1m[36m (99.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:30:49 +0000
+
+
+Started GET "/movies" for 208.71.27.111 at 2018-10-17 23:30:55 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 59ms (Views: 32.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/1" for 208.71.27.111 at 2018-10-17 23:31:09 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/similar_movies/Aladdin" for 208.71.27.111 at 2018-10-17 23:31:13 +0000
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Aladdin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+Redirected to http://algebra-king-3000.codio.io/
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Aladdin"]]
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:31:13 +0000
+
+
+Started GET "/movies" for 208.71.27.111 at 2018-10-17 23:31:27 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:31:56 +0000
+
+
+Started GET "/movies" for 208.71.27.111 at 2018-10-17 23:32:00 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (12.9ms)
+Completed 200 OK in 59ms (Views: 32.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/2" for 208.71.27.111 at 2018-10-17 23:32:02 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/show.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/similar_movies/The%20Terminator" for 208.71.27.111 at 2018-10-17 23:32:04 +0000
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"The Terminator"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "The Terminator"]]
+Redirected to http://algebra-king-3000.codio.io/
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "The Terminator"]]
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:32:04 +0000
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:33:00 +0000
+
+
+Started GET "/movies" for 208.71.27.111 at 2018-10-17 23:33:04 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 64ms (Views: 34.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/1" for 208.71.27.111 at 2018-10-17 23:33:06 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/similar_movies/Aladdin" for 208.71.27.111 at 2018-10-17 23:33:08 +0000
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Aladdin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+Redirected to http://algebra-king-3000.codio.io/
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Aladdin"]]
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:33:08 +0000
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: '/movies'` to `controller: '/movies'`. (called from block in <top (required)> at /home/codio/workspace/5/hw-acceptance-unit-test-cycle/rottenpotatoes/config/routes.rb:7)
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:40:19 +0000
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:40:30 +0000
+
+
+Started GET "/movies" for 208.71.27.111 at 2018-10-17 23:40:34 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 66ms (Views: 36.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 208.71.27.111 at 2018-10-17 23:40:34 +0000
+
+
+Started GET "/assets/application.self-2b9b4ceb35a4568bfbe3001eb6cf7d691787c8ec9b2018eecbc3c235cc74b7a4.css?body=1" for 208.71.27.111 at 2018-10-17 23:40:35 +0000
+
+
+Started GET "/movies/1" for 208.71.27.111 at 2018-10-17 23:40:36 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (12.7ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/similar_movies/Aladdin" for 208.71.27.111 at 2018-10-17 23:40:38 +0000
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Aladdin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+Redirected to http://algebra-king-3000.codio.io/
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Aladdin"]]
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:40:38 +0000
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:41:51 +0000
+
+
+Started GET "/movies" for 208.71.27.111 at 2018-10-17 23:41:57 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 59ms (Views: 32.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/1" for 208.71.27.111 at 2018-10-17 23:41:59 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/similar_movies/Aladdin" for 208.71.27.111 at 2018-10-17 23:42:01 +0000
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Aladdin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+Redirected to http://algebra-king-3000.codio.io/
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Aladdin"]]
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:42:01 +0000
+
+
+Started GET "/assets/rails.png" for 208.71.27.111 at 2018-10-17 23:48:48 +0000
+
+
+Started GET "/movies" for 208.71.27.111 at 2018-10-17 23:48:54 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 62ms (Views: 35.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.self-2b9b4ceb35a4568bfbe3001eb6cf7d691787c8ec9b2018eecbc3c235cc74b7a4.css?body=1" for 208.71.27.111 at 2018-10-17 23:48:54 +0000
+
+
+Started GET "/movies/1" for 208.71.27.111 at 2018-10-17 23:48:55 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/similar_movies/Aladdin" for 208.71.27.111 at 2018-10-17 23:48:57 +0000
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Aladdin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+Redirected to http://algebra-king-3000.codio.io/movies
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Aladdin"]]
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 208.71.27.111 at 2018-10-17 23:48:57 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
