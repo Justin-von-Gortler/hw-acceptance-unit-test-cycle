@@ -13,5 +13,5 @@ Then /^the director of "([^"]*)" should be "([^"]*)"$/ do |movie, director|
             counter += 1
         end
     end 
-    expect(movies_table.hashes[counter]['director'].to eq(director)
+    expect(movies_table.hashes[counter]['director']).to eq(director)
 end
