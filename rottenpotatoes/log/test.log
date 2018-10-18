@@ -2266,3 +2266,342 @@ Processing by MoviesController#index as HTML
   Rendered movies/index.html.haml within layouts/application (4.4ms)
 Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
   [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"a film of some repute"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "a film of some repute"]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"a film of some repute"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "a film of some repute"]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (110.2ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (130.5ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (119.2ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (192.8ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Star Wars"], ["rating", "PG"], ["release_date", "1977-05-25 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:28:01.781870"], ["updated_at", "2018-10-18 17:28:01.781870"]]
+  [1m[36m (122.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Phantom Menace"], ["rating", "PG"], ["release_date", "1999-05-16 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:28:01.907602"], ["updated_at", "2018-10-18 17:28:01.907602"]]
+  [1m[35m (141.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1989-07-21 00:00:00.000000"], ["director", "Steven Spielberg"], ["created_at", "2018-10-18 17:28:02.051373"], ["updated_at", "2018-10-18 17:28:02.051373"]]
+  [1m[36m (114.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Indiana Jones and the Temple of Doom"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-10-18 17:28:02.167758"], ["updated_at", "2018-10-18 17:28:02.167758"]]
+  [1m[35m (108.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (132.6ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (113.0ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Star Wars"], ["rating", "PG"], ["release_date", "1977-05-25 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:29:10.329203"], ["updated_at", "2018-10-18 17:29:10.329203"]]
+  [1m[36m (119.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Phantom Menace"], ["rating", "PG"], ["release_date", "1999-05-16 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:29:10.451961"], ["updated_at", "2018-10-18 17:29:10.451961"]]
+  [1m[35m (117.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1989-07-21 00:00:00.000000"], ["director", "Steven Spielberg"], ["created_at", "2018-10-18 17:29:10.575613"], ["updated_at", "2018-10-18 17:29:10.575613"]]
+  [1m[36m (159.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Indiana Jones and the Temple of Doom"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-10-18 17:29:10.737826"], ["updated_at", "2018-10-18 17:29:10.737826"]]
+  [1m[35m (279.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (133.4ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (110.9ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Star Wars"], ["rating", "PG"], ["release_date", "1977-05-25 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:31:14.258943"], ["updated_at", "2018-10-18 17:31:14.258943"]]
+  [1m[36m (103.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Phantom Menace"], ["rating", "PG"], ["release_date", "1999-05-16 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:31:14.368398"], ["updated_at", "2018-10-18 17:31:14.368398"]]
+  [1m[35m (101.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1989-07-21 00:00:00.000000"], ["director", "Steven Spielberg"], ["created_at", "2018-10-18 17:31:14.472411"], ["updated_at", "2018-10-18 17:31:14.472411"]]
+  [1m[36m (113.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Indiana Jones and the Temple of Doom"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-10-18 17:31:14.587934"], ["updated_at", "2018-10-18 17:31:14.587934"]]
+  [1m[35m (110.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (118.3ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (126.9ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Star Wars"], ["rating", "PG"], ["release_date", "1977-05-25 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:32:14.297774"], ["updated_at", "2018-10-18 17:32:14.297774"]]
+  [1m[36m (120.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Phantom Menace"], ["rating", "PG"], ["release_date", "1999-05-16 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:32:14.422272"], ["updated_at", "2018-10-18 17:32:14.422272"]]
+  [1m[35m (112.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1989-07-21 00:00:00.000000"], ["director", "Steven Spielberg"], ["created_at", "2018-10-18 17:32:14.539789"], ["updated_at", "2018-10-18 17:32:14.539789"]]
+  [1m[36m (107.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Indiana Jones and the Temple of Doom"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-10-18 17:32:14.650780"], ["updated_at", "2018-10-18 17:32:14.650780"]]
+  [1m[35m (110.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"The Phantom Menace"}
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (122.1ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (119.3ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Star Wars"], ["rating", "PG"], ["release_date", "1977-05-25 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:33:23.657448"], ["updated_at", "2018-10-18 17:33:23.657448"]]
+  [1m[36m (109.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Phantom Menace"], ["rating", "PG"], ["release_date", "1999-05-16 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:33:23.769724"], ["updated_at", "2018-10-18 17:33:23.769724"]]
+  [1m[35m (106.4ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1989-07-21 00:00:00.000000"], ["director", "Steven Spielberg"], ["created_at", "2018-10-18 17:33:23.878928"], ["updated_at", "2018-10-18 17:33:23.878928"]]
+  [1m[36m (114.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Indiana Jones and the Temple of Doom"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-10-18 17:33:23.995941"], ["updated_at", "2018-10-18 17:33:23.995941"]]
+  [1m[35m (108.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Star Wars"}
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (118.0ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (97.1ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Star Wars"], ["rating", "PG"], ["release_date", "1977-05-25 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:38:42.153163"], ["updated_at", "2018-10-18 17:38:42.153163"]]
+  [1m[36m (100.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Phantom Menace"], ["rating", "PG"], ["release_date", "1999-05-16 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:38:42.258782"], ["updated_at", "2018-10-18 17:38:42.258782"]]
+  [1m[35m (121.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1989-07-21 00:00:00.000000"], ["director", "Steven Spielberg"], ["created_at", "2018-10-18 17:38:42.383652"], ["updated_at", "2018-10-18 17:38:42.383652"]]
+  [1m[36m (133.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Indiana Jones and the Temple of Doom"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-10-18 17:38:42.521493"], ["updated_at", "2018-10-18 17:38:42.521493"]]
+  [1m[35m (112.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (116.1ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (105.2ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Star Wars"], ["rating", "PG"], ["release_date", "1977-05-25 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:39:23.854022"], ["updated_at", "2018-10-18 17:39:23.854022"]]
+  [1m[36m (110.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Phantom Menace"], ["rating", "PG"], ["release_date", "1999-05-16 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:39:23.967679"], ["updated_at", "2018-10-18 17:39:23.967679"]]
+  [1m[35m (94.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1989-07-21 00:00:00.000000"], ["director", "Steven Spielberg"], ["created_at", "2018-10-18 17:39:24.072203"], ["updated_at", "2018-10-18 17:39:24.072203"]]
+  [1m[36m (123.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Indiana Jones and the Temple of Doom"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-10-18 17:39:24.198966"], ["updated_at", "2018-10-18 17:39:24.198966"]]
+  [1m[35m (124.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Star Wars"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "movies"."title" FROM "movies" WHERE "movies"."director" = ?[0m  [["director", "George Lucas"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (130.8ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (114.1ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Star Wars"], ["rating", "PG"], ["release_date", "1977-05-25 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:41:23.572596"], ["updated_at", "2018-10-18 17:41:23.572596"]]
+  [1m[36m (108.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Phantom Menace"], ["rating", "PG"], ["release_date", "1999-05-16 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:41:23.683675"], ["updated_at", "2018-10-18 17:41:23.683675"]]
+  [1m[35m (113.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1989-07-21 00:00:00.000000"], ["director", "Steven Spielberg"], ["created_at", "2018-10-18 17:41:23.799103"], ["updated_at", "2018-10-18 17:41:23.799103"]]
+  [1m[36m (103.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Indiana Jones and the Temple of Doom"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-10-18 17:41:23.906566"], ["updated_at", "2018-10-18 17:41:23.906566"]]
+  [1m[35m (109.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Star Wars"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Star Wars"]]
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered movies/search.html.haml within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 59ms (Views: 53.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (125.5ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (111.3ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Star Wars"], ["rating", "PG"], ["release_date", "1977-05-25 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:42:55.156218"], ["updated_at", "2018-10-18 17:42:55.156218"]]
+  [1m[36m (112.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Phantom Menace"], ["rating", "PG"], ["release_date", "1999-05-16 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:42:55.271930"], ["updated_at", "2018-10-18 17:42:55.271930"]]
+  [1m[35m (100.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1989-07-21 00:00:00.000000"], ["director", "Steven Spielberg"], ["created_at", "2018-10-18 17:42:55.375262"], ["updated_at", "2018-10-18 17:42:55.375262"]]
+  [1m[36m (100.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Indiana Jones and the Temple of Doom"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-10-18 17:42:55.477498"], ["updated_at", "2018-10-18 17:42:55.477498"]]
+  [1m[35m (112.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Star Wars"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Star Wars"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "movies"."title" FROM "movies" WHERE "movies"."director" = ?[0m  [["director", "George Lucas"]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Star Wars"]]
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered movies/search.html.haml within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 21ms (Views: 13.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (128.2ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (138.2ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Star Wars"], ["rating", "PG"], ["release_date", "1977-05-25 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:43:58.391223"], ["updated_at", "2018-10-18 17:43:58.391223"]]
+  [1m[36m (99.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Phantom Menace"], ["rating", "PG"], ["release_date", "1999-05-16 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:43:58.493193"], ["updated_at", "2018-10-18 17:43:58.493193"]]
+  [1m[35m (109.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1989-07-21 00:00:00.000000"], ["director", "Steven Spielberg"], ["created_at", "2018-10-18 17:43:58.604319"], ["updated_at", "2018-10-18 17:43:58.604319"]]
+  [1m[36m (109.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Indiana Jones and the Temple of Doom"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-10-18 17:43:58.715627"], ["updated_at", "2018-10-18 17:43:58.715627"]]
+  [1m[35m (139.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (119.3ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (111.2ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Star Wars"], ["rating", "PG"], ["release_date", "1977-05-25 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:48:43.709255"], ["updated_at", "2018-10-18 17:48:43.709255"]]
+  [1m[36m (119.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Phantom Menace"], ["rating", "PG"], ["release_date", "1999-05-16 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:48:43.833453"], ["updated_at", "2018-10-18 17:48:43.833453"]]
+  [1m[35m (105.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1989-07-21 00:00:00.000000"], ["director", "Steven Spielberg"], ["created_at", "2018-10-18 17:48:43.950010"], ["updated_at", "2018-10-18 17:48:43.950010"]]
+  [1m[36m (108.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Indiana Jones and the Temple of Doom"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-10-18 17:48:44.061095"], ["updated_at", "2018-10-18 17:48:44.061095"]]
+  [1m[35m (111.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Star Wars"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Star Wars"]]
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered movies/search.html.haml within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 29ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Indiana Jones and the Temple of Doom"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (123.3ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (127.3ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Star Wars"], ["rating", "PG"], ["release_date", "1977-05-25 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:50:37.445228"], ["updated_at", "2018-10-18 17:50:37.445228"]]
+  [1m[36m (120.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Phantom Menace"], ["rating", "PG"], ["release_date", "1999-05-16 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:50:37.571622"], ["updated_at", "2018-10-18 17:50:37.571622"]]
+  [1m[35m (122.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1989-07-21 00:00:00.000000"], ["director", "Steven Spielberg"], ["created_at", "2018-10-18 17:50:37.697324"], ["updated_at", "2018-10-18 17:50:37.697324"]]
+  [1m[36m (135.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Indiana Jones and the Temple of Doom"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-10-18 17:50:37.836593"], ["updated_at", "2018-10-18 17:50:37.836593"]]
+  [1m[35m (108.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Star Wars"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Star Wars"]]
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered movies/search.html.haml within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 31ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Indiana Jones and the Temple of Doom"]]
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Indiana Jones and the Temple of Doom"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Indiana Jones and the Temple of Doom"]]
+Redirected to http://test.host/movies
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Indiana Jones and the Temple of Doom"]]
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (120.8ms)[0m  DELETE FROM "movies";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (140.4ms)[0m  DELETE FROM sqlite_sequence where name = 'movies';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Star Wars"], ["rating", "PG"], ["release_date", "1977-05-25 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:51:17.309110"], ["updated_at", "2018-10-18 17:51:17.309110"]]
+  [1m[36m (103.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Phantom Menace"], ["rating", "PG"], ["release_date", "1999-05-16 00:00:00.000000"], ["director", "George Lucas"], ["created_at", "2018-10-18 17:51:17.418070"], ["updated_at", "2018-10-18 17:51:17.418070"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1989-07-21 00:00:00.000000"], ["director", "Steven Spielberg"], ["created_at", "2018-10-18 17:51:17.522641"], ["updated_at", "2018-10-18 17:51:17.522641"]]
+  [1m[36m (110.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Indiana Jones and the Temple of Doom"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-10-18 17:51:17.635481"], ["updated_at", "2018-10-18 17:51:17.635481"]]
+  [1m[35m (131.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Star Wars"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Star Wars"]]
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered movies/search.html.haml within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 20ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Indiana Jones and the Temple of Doom"]]
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Indiana Jones and the Temple of Doom"}
+  [1m[35mMovie Load (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Indiana Jones and the Temple of Doom"]]
+Redirected to http://test.host/movies
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Indiana Jones and the Temple of Doom"]]
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
